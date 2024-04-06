@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopease/features/authentication/screens/onboarding/onboarding_screen.dart';
 import 'package:shopease/utils/theme/theme.dart';
 
 class MyApp extends StatelessWidget {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       // light theme
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
-      home: Container(),
+      home: const OnBoardingScreen(),
     );
   }
 }

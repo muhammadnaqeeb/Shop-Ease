@@ -21,6 +21,7 @@ dependencies:
   connectivity_plus: ^6.0.1
   get_storage: ^2.1.1
   flutter_native_splash: ^2.3.10
+  smooth_page_indicator: ^1.1.0
 
 
 dev_dependencies:
@@ -37,6 +38,7 @@ flutter:
     - assets/images/
     - assets/logos/
     - assets/icons/
+    - assets/images/on_boarding_images/
 
   fonts:
     - family: Poppins
