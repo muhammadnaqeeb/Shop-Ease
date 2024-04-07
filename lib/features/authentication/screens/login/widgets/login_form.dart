@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopease/features/authentication/screens/signup/signup_screen.dart';
 import 'package:shopease/utils/constants/sizes.dart';

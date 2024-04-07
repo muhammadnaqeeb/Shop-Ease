@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shopease/features/authentication/screens/signup/verify_email_screen.dart';
 import 'package:shopease/utils/constants/colors.dart';
 import 'package:shopease/utils/constants/sizes.dart';
 import 'package:shopease/utils/constants/text_strings.dart';
@@ -19,20 +20,22 @@ class SignupForm extends StatelessWidget {
       child: Column(
         children: [
           TextFormField(
-              expands: false,
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Iconsax.user),
-                labelText: "Name",
-              ),
-              validator: (value) {}),
+            expands: false,
+            decoration: const InputDecoration(
+              prefixIcon: Icon(Iconsax.user),
+              labelText: "Name",
+            ),
+            //validator: (value) {}
+          ),
           const SizedBox(height: TSizes.sm),
           TextFormField(
-              expands: false,
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Iconsax.user_edit),
-                labelText: TTexts.username,
-              ),
-              validator: (value) {}),
+            expands: false,
+            decoration: const InputDecoration(
+              prefixIcon: Icon(Iconsax.user_edit),
+              labelText: TTexts.username,
+            ),
+            //validator: (value) {}
+          ),
           const SizedBox(height: TSizes.sm),
           TextFormField(
             expands: false,
@@ -91,7 +94,13 @@ class SignupForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const VerifyEmailScreen(),
+                    ));
+              },
               child: const Text(TTexts.createAccount),
             ),
           ),
