@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shopease/features/authentication/screens/signup/signup_screen.dart';
 import 'package:shopease/utils/constants/sizes.dart';
 import 'package:shopease/utils/constants/text_strings.dart';
 import 'package:shopease/utils/validators/validation.dart';
@@ -66,8 +68,14 @@ class LoginForm extends StatelessWidget {
             SizedBox(
                 width: double.infinity,
                 child: OutlinedButton(
-                    onPressed: () {},
-                    child: const Text(TTexts.forgetPassword))),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SignupScreen(),
+                          ));
+                    },
+                    child: const Text(TTexts.createAccount))),
             const SizedBox(height: TSizes.sm),
           ],
         ),
