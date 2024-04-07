@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shopease/features/authentication/screens/password_configuration.dart/forget_password_screen.dart';
 import 'package:shopease/features/authentication/screens/signup/signup_screen.dart';
 import 'package:shopease/utils/constants/sizes.dart';
 import 'package:shopease/utils/constants/text_strings.dart';
@@ -50,7 +51,14 @@ class LoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                    onPressed: () {}, child: const Text(TTexts.forgetPassword))
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ForgetPasswordScreen(),
+                          ));
+                    },
+                    child: const Text(TTexts.forgetPassword))
               ],
             ),
             const SizedBox(height: TSizes.sm),
