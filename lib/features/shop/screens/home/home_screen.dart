@@ -49,16 +49,25 @@ class HomeScreen extends StatelessWidget {
             ),
             // banner
             const TPromoSlider(),
+            const SizedBox(height: TSizes.spaceBtwItems),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
+              child:
+                  TSectionHeading(title: "Popular Products", onPressed: () {}),
+            ),
 
             Padding(
-              padding: const EdgeInsets.all(TSizes.spaceBtwItems),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: TSizes.spaceBtwItems),
               child: TMainGridLayout(
                 itemCount: 4,
                 itemBuilder: (_, index) {
                   return const TProductCardVertical();
                 },
               ),
-            )
+            ),
+            const SizedBox(height: TSizes.spaceBtwItems),
           ],
         ),
       ),

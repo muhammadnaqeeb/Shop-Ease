@@ -17,13 +17,15 @@ class TPriceText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(currencySign + price,
-        overflow: TextOverflow.ellipsis,
-        maxLines: maxLines,
-        style: isLarge
-            ? Theme.of(context).textTheme.headlineMedium!.apply(
-                decoration: lineThrough ? TextDecoration.lineThrough : null)
-            : Theme.of(context).textTheme.titleLarge!.apply(
-                decoration: lineThrough ? TextDecoration.lineThrough : null));
+    return Expanded(
+      child: Text(currencySign + price,
+          overflow: TextOverflow.ellipsis,
+          maxLines: maxLines,
+          style: isLarge
+              ? Theme.of(context).textTheme.headlineMedium!.apply(
+                  decoration: lineThrough ? TextDecoration.lineThrough : null)
+              : Theme.of(context).textTheme.titleLarge!.apply(
+                  decoration: lineThrough ? TextDecoration.lineThrough : null)),
+    );
   }
 }
