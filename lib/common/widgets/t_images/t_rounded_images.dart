@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shopease/utils/constants/sizes.dart';
 
-class TRounderImageBanner extends StatelessWidget {
-  const TRounderImageBanner({
+class TRounderImage extends StatelessWidget {
+  const TRounderImage({
     super.key,
     this.width,
     this.height,

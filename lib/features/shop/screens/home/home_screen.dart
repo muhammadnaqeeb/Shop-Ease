@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shopease/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:shopease/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:shopease/common/widgets/layout/t_grid_layout.dart';
+import 'package:shopease/common/widgets/products/product_card/product_card_verticle.dart';
 import 'package:shopease/common/widgets/texts/section_heading.dart';
 import 'package:shopease/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:shopease/features/shop/screens/home/widgets/promo_slider.dart';
@@ -46,7 +48,17 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             // banner
-            TPromoSlider()
+            const TPromoSlider(),
+
+            Padding(
+              padding: const EdgeInsets.all(TSizes.spaceBtwItems),
+              child: TMainGridLayout(
+                itemCount: 4,
+                itemBuilder: (_, index) {
+                  return const TProductCardVertical();
+                },
+              ),
+            )
           ],
         ),
       ),

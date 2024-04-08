@@ -20,9 +20,9 @@ class TPromoSlider extends StatelessWidget {
       children: [
         CarouselSlider(
           items: const [
-            TRounderImageBanner(imageUrl: TImages.promoBanner1),
-            TRounderImageBanner(imageUrl: TImages.promoBanner2),
-            TRounderImageBanner(imageUrl: TImages.promoBanner3),
+            TRounderImage(imageUrl: TImages.promoBanner1),
+            TRounderImage(imageUrl: TImages.promoBanner2),
+            TRounderImage(imageUrl: TImages.promoBanner3),
           ],
           options: CarouselOptions(
             viewportFraction: 1,
