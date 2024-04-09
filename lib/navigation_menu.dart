@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shopease/features/personalization/screens/settings/setting_screen.dart';
 import 'package:shopease/features/shop/screens/home/home_screen.dart';
 import 'package:shopease/features/shop/screens/store/store_screen.dart';
 import 'package:shopease/features/shop/screens/wishlist/wishlist_screen.dart';
@@ -50,7 +51,7 @@ class NavigationControllerGetx extends GetxController {
     const HomeScreen(),
     const StoreScreen(),
     const WishlistScreen(),
-    Container(color: Colors.blue),
+    const SettingScreen(),
   ];
 
   changeSelectedIndex(int index) {
