@@ -10,12 +10,14 @@ class TRounderImage extends StatelessWidget {
     this.padding = const EdgeInsets.all(TSizes.xs),
     this.onPressed,
     this.isNetworkImage = false,
+    this.color,
   });
   final double? width, height;
   final String imageUrl;
   final EdgeInsetsGeometry? padding;
   final VoidCallback? onPressed;
   final bool isNetworkImage;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +38,7 @@ class TRounderImage extends StatelessWidget {
                     imageUrl,
                   ) as ImageProvider,
             fit: BoxFit.contain,
+            color: color,
           ),
         ),
       ),

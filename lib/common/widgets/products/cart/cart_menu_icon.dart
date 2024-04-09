@@ -1,23 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopease/utils/constants/colors.dart';
+import 'package:shopease/utils/helpers/helper_functions.dart';
 
 class TCardCounterIcon extends StatelessWidget {
   const TCardCounterIcon({
     super.key,
-    required this.iconColor,
+    this.iconColor,
     required this.onPressed,
   });
-  final Color iconColor;
+  final Color? iconColor;
   final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
+    final isDark = THelperFunctions.isDarkMode(context);
     return Stack(
       children: [
         IconButton(
           onPressed: onPressed,
-          icon: Icon(Iconsax.shopping_bag, color: iconColor),
+          icon: Icon(
+            Iconsax.shopping_bag,
+            color: isDark ? TColors.white : iconColor,
+          ),
         ),
         Positioned(
           right: 5,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopease/features/shop/screens/home/home_screen.dart';
+import 'package:shopease/features/shop/screens/store/store_screen.dart';
 import 'package:shopease/utils/constants/colors.dart';
 
 class NavigationMenu extends StatelessWidget {
@@ -46,7 +47,7 @@ class NavigationControllerGetx extends GetxController {
 
   final screens = [
     const HomeScreen(),
-    Container(color: Colors.yellow),
+    const StoreScreen(),
     Container(color: Colors.orange),
     Container(color: Colors.blue),
   ];

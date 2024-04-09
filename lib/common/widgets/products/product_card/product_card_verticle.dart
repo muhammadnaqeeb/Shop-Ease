@@ -5,6 +5,7 @@ import 'package:shopease/common/widgets/icons/t_circular_icon.dart';
 import 'package:shopease/common/widgets/rounded_container/t_rounded_container.dart';
 import 'package:shopease/common/widgets/t_images/t_rounded_images.dart';
 import 'package:shopease/common/widgets/texts/product_title_text.dart';
+import 'package:shopease/common/widgets/texts/t_brand_title_text_with_verification.dart';
 import 'package:shopease/common/widgets/texts/t_price_text.dart';
 import 'package:shopease/utils/constants/colors.dart';
 import 'package:shopease/utils/constants/image_strings.dart';
@@ -76,21 +77,11 @@ class TProductCardVertical extends StatelessWidget {
                     smallSize: true,
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text('Nike',
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
-                          style: Theme.of(context).textTheme.labelMedium),
-                      const SizedBox(width: TSizes.sm),
-                      const Icon(Iconsax.verify5,
-                          color: TColors.primary, size: TSizes.iconXs)
-                    ],
-                  ),
+                  TBrandTitleTextWithVerification(title: "Nike"),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const TPriceText(price: "45777777", isLarge: true),
+                      const TPriceText(price: "45", isLarge: true),
                       Container(
                         decoration: const BoxDecoration(
                             color: TColors.dark,
