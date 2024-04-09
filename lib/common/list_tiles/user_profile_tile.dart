@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopease/common/widgets/t_images/t_rounded_images.dart';
+import 'package:shopease/features/personalization/screens/profile/profile_screen.dart';
 import 'package:shopease/utils/constants/colors.dart';
 import 'package:shopease/utils/constants/image_strings.dart';
 
@@ -32,6 +33,11 @@ class TUserProfileTile extends StatelessWidget {
       trailing: IconButton(
         onPressed: () {
           // on click -> profile screen
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ProfileScreen(),
+              ));
         },
         icon: const Icon(
           Iconsax.edit,
