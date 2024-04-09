@@ -77,7 +77,7 @@ class TProductCardVertical extends StatelessWidget {
                     smallSize: true,
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems / 2),
-                  TBrandTitleTextWithVerification(title: "Nike"),
+                  const TBrandTitleTextWithVerification(title: "Nike"),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

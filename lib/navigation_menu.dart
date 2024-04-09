@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopease/features/shop/screens/home/home_screen.dart';
 import 'package:shopease/features/shop/screens/store/store_screen.dart';
+import 'package:shopease/features/shop/screens/wishlist/wishlist_screen.dart';
 import 'package:shopease/utils/constants/colors.dart';
 
 class NavigationMenu extends StatelessWidget {
@@ -48,7 +49,7 @@ class NavigationControllerGetx extends GetxController {
   final screens = [
     const HomeScreen(),
     const StoreScreen(),
-    Container(color: Colors.orange),
+    const WishlistScreen(),
     Container(color: Colors.blue),
   ];
 
