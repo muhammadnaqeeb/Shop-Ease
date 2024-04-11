@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:shopease/common/list_tiles/setting_menu_tile.dart';
-import 'package:shopease/common/list_tiles/user_profile_tile.dart';
+import 'package:shopease/common/widgets/list_tiles/setting_menu_tile.dart';
+import 'package:shopease/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:shopease/common/widgets/appbar/tappbar.dart';
 import 'package:shopease/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:shopease/common/widgets/texts/section_heading.dart';

@@ -7,6 +7,7 @@ import 'package:shopease/common/widgets/t_images/t_rounded_images.dart';
 import 'package:shopease/common/widgets/texts/product_title_text.dart';
 import 'package:shopease/common/widgets/texts/t_brand_title_text_with_verification.dart';
 import 'package:shopease/common/widgets/texts/t_price_text.dart';
+import 'package:shopease/features/shop/screens/product_details/product_detail.dart';
 import 'package:shopease/utils/constants/colors.dart';
 import 'package:shopease/utils/constants/image_strings.dart';
 import 'package:shopease/utils/constants/sizes.dart';
@@ -19,7 +20,13 @@ class TProductCardVertical extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const ProductDetail(),
+            ));
+      },
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),

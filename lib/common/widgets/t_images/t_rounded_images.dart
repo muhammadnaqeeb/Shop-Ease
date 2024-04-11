@@ -11,13 +11,17 @@ class TRounderImage extends StatelessWidget {
     this.onPressed,
     this.isNetworkImage = false,
     this.color,
+    this.backgroundColor,
+    this.border,
   });
+  final Color? backgroundColor;
   final double? width, height;
   final String imageUrl;
   final EdgeInsetsGeometry? padding;
   final VoidCallback? onPressed;
   final bool isNetworkImage;
   final Color? color;
+  final BoxBorder? border;
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +31,10 @@ class TRounderImage extends StatelessWidget {
         width: width,
         height: height,
         padding: padding,
-        decoration:
-            BoxDecoration(borderRadius: BorderRadius.circular(TSizes.md)),
+        decoration: BoxDecoration(
+            border: border,
+            borderRadius: BorderRadius.circular(TSizes.md),
+            color: backgroundColor),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(TSizes.md),
           child: Image(
