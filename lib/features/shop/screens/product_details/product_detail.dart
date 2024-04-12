@@ -7,6 +7,7 @@ import 'package:shopease/features/shop/screens/product_details/widgets/product_a
 import 'package:shopease/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import 'package:shopease/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:shopease/features/shop/screens/product_details/widgets/rating_share_widget.dart';
+import 'package:shopease/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:shopease/utils/constants/sizes.dart';
 
 class ProductDetail extends StatelessWidget {
@@ -32,13 +33,13 @@ class ProductDetail extends StatelessWidget {
             child: Column(
               children: [
                 ///---Rating & share
-                TRatingAndShare(),
+                const TRatingAndShare(),
 
                 ///---price, title, stock & brand
-                TProductMetaData(),
+                const TProductMetaData(),
 
                 ///---Attributes
-                TProductAttributes(),
+                const TProductAttributes(),
                 const SizedBox(height: TSizes.spaceBtwSections),
 
                 ///---checkout button
@@ -77,7 +78,14 @@ class ProductDetail extends StatelessWidget {
                       showActionButton: false,
                     ),
                     IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const ProductReviewsScreen(),
+                              ));
+                        },
                         icon: const Icon(
                           Iconsax.arrow_right_3,
                           size: 18,
