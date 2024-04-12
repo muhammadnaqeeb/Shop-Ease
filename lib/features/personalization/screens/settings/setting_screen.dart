@@ -6,6 +6,7 @@ import 'package:shopease/common/widgets/appbar/tappbar.dart';
 import 'package:shopease/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:shopease/common/widgets/texts/section_heading.dart';
 import 'package:shopease/features/personalization/screens/address/address_screen.dart';
+import 'package:shopease/features/shop/screens/cart/cart_screen.dart';
 import 'package:shopease/utils/constants/colors.dart';
 import 'package:shopease/utils/constants/sizes.dart';
 
@@ -54,10 +55,16 @@ class SettingScreen extends StatelessWidget {
                         )),
                     subTitle: "My Shoping delivery address"),
 
-                const TSettingMenuTile(
-                    icon: Iconsax.shopping_cart,
-                    title: "My Cart",
-                    subTitle: "Add and remove products"),
+                TSettingMenuTile(
+                  icon: Iconsax.shopping_cart,
+                  title: "My Cart",
+                  subTitle: "Add and remove products",
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const CartScreen(),
+                      )),
+                ),
 
                 const TSettingMenuTile(
                     icon: Iconsax.bag_tick,
