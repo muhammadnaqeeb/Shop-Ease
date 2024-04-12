@@ -5,6 +5,7 @@ import 'package:shopease/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:shopease/common/widgets/appbar/tappbar.dart';
 import 'package:shopease/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:shopease/common/widgets/texts/section_heading.dart';
+import 'package:shopease/features/personalization/screens/address/address_screen.dart';
 import 'package:shopease/utils/constants/colors.dart';
 import 'package:shopease/utils/constants/sizes.dart';
 
@@ -43,9 +44,14 @@ class SettingScreen extends StatelessWidget {
                 const TSectionHeading(
                     title: "Account Settings", showActionButton: false),
                 const SizedBox(height: TSizes.spaceBtwItems),
-                const TSettingMenuTile(
+                TSettingMenuTile(
                     icon: Iconsax.safe_home,
                     title: "My Address",
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const AddressScreen(),
+                        )),
                     subTitle: "My Shoping delivery address"),
 
                 const TSettingMenuTile(
