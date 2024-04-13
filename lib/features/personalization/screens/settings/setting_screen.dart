@@ -7,6 +7,7 @@ import 'package:shopease/common/widgets/custom_shapes/containers/primary_header_
 import 'package:shopease/common/widgets/texts/section_heading.dart';
 import 'package:shopease/features/personalization/screens/address/address_screen.dart';
 import 'package:shopease/features/shop/screens/cart/cart_screen.dart';
+import 'package:shopease/features/shop/screens/order/order_screen.dart';
 import 'package:shopease/utils/constants/colors.dart';
 import 'package:shopease/utils/constants/sizes.dart';
 
@@ -66,10 +67,17 @@ class SettingScreen extends StatelessWidget {
                       )),
                 ),
 
-                const TSettingMenuTile(
-                    icon: Iconsax.bag_tick,
-                    title: "My Orders",
-                    subTitle: "In progress and completed Orders"),
+                TSettingMenuTile(
+                  icon: Iconsax.bag_tick,
+                  title: "My Orders",
+                  subTitle: "In progress and completed Orders",
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const OrderScreen(),
+                    ),
+                  ),
+                ),
 
                 const TSettingMenuTile(
                     icon: Iconsax.bank,
