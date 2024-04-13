@@ -49,7 +49,7 @@ class TSingleAddress extends StatelessWidget {
             const SizedBox(
               height: TSizes.xs,
             ),
-            Text(
+            const Text(
               "+92 310 1234567",
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
@@ -57,7 +57,7 @@ class TSingleAddress extends StatelessWidget {
             const SizedBox(
               height: TSizes.xs,
             ),
-            Text(
+            const Text(
               "82345 Timmy Coves, South Liana, USA",
               softWrap: true,
             ),

@@ -35,9 +35,9 @@ class TCartItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const TBrandTitleTextWithVerification(title: "Nike"),
-              Flexible(
-                child: const TProductTitleText(
-                    title: "Black Sports Shoes", maxLine: 1),
+              const Flexible(
+                child:
+                    TProductTitleText(title: "Black Sports Shoes", maxLine: 1),
               ),
               Text.rich(TextSpan(children: [
                 TextSpan(

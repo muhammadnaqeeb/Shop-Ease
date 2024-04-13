@@ -47,6 +47,7 @@ flutter:
     - assets/images/products/
     - assets/icons/brands/
     - assets/images/users/
+    - assets/icons/payment_methods/
 
   fonts:
     - family: Poppins
