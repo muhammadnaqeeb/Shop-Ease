@@ -6,6 +6,7 @@ import 'package:shopease/common/widgets/layout/t_grid_layout.dart';
 import 'package:shopease/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:shopease/common/widgets/brands/brand_card.dart';
 import 'package:shopease/common/widgets/texts/section_heading.dart';
+import 'package:shopease/features/shop/screens/brand/all_brands.dart';
 import 'package:shopease/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:shopease/utils/constants/colors.dart';
 import 'package:shopease/utils/constants/sizes.dart';
@@ -57,7 +58,13 @@ class StoreScreen extends StatelessWidget {
                       // Feature brands
                       TSectionHeading(
                         title: "Feature brands",
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const AllBrandsScreen(),
+                              ));
+                        },
                       ),
                       const SizedBox(height: TSizes.spaceBtwItems / 1.5),
                       TMainGridLayout(
