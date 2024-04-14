@@ -4,6 +4,7 @@ import 'package:shopease/common/widgets/custom_shapes/containers/search_containe
 import 'package:shopease/common/widgets/layout/t_grid_layout.dart';
 import 'package:shopease/common/widgets/products/product_card/product_card_verticle.dart';
 import 'package:shopease/common/widgets/texts/section_heading.dart';
+import 'package:shopease/features/shop/screens/all_products/all_products.dart';
 import 'package:shopease/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:shopease/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:shopease/features/shop/screens/home/widgets/t_home_categories.dart';
@@ -54,8 +55,15 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding:
                   const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
-              child:
-                  TSectionHeading(title: "Popular Products", onPressed: () {}),
+              child: TSectionHeading(
+                  title: "Popular Products",
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const AllProducts(),
+                        ));
+                  }),
             ),
 
             Padding(
